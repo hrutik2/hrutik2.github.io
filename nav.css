@@ -1,0 +1,140 @@
+/* styles.css */
+
+
+body{
+ box-sizing: border-box;
+ margin: 0%;
+ padding: 0%;
+}
+/* Navbar styles */
+#nav-menu {
+    background-color: #090bac;
+    padding: 10px;
+    
+  }
+  #nav-menu ul {
+    list-style: none;
+    margin-left: 40%;
+
+  }
+  
+  #nav-menu li {
+    display: inline-block;
+    
+    margin-right: 60px; /* Adjust the margin as needed */
+  }
+  
+  #nav-menu li a {
+    color: #ddd2d2;
+    background-color: #090bac;
+    text-decoration: none;
+  }
+  
+
+  
+  /* Home section styles */
+  #home {
+    text-align: center;
+  }
+  
+  #user-detail-name {
+    font-size: 40px;
+    font:  sans-serif;
+    
+  }
+  
+  #user-detail-intro {
+    font-size: 30px;
+    font:  sans-serif;
+  }
+  
+  .home-img {
+
+    border-radius: 50%;
+    max-width: 200px;
+  }
+  
+  /* About section styles */
+  .about {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Skills section styles */
+  #skills {
+    text-align: center;
+  }
+  
+  .skills-card {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .skills-card-img {
+    max-width: 100px;
+  }
+  
+  /* Projects section styles */
+  #projects {
+    text-align: center;
+  }
+  
+  .project-card {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .project-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .project-description {
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+  
+  .project-tech-stack {
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  .project-github-link,
+  .project-deployed-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+  /* Contact section styles */
+  #contact {
+    text-align: center;
+  }
+  
+  #contact-github,
+  #contact-linkedin {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  #contact-phone,
+  #contact-email {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  /* Resume button styles */
+  #resume-button-1,
+  #resume-button-2 {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  

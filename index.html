@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="./nav.css"> <!-- Link your CSS file -->
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+</head>
+<body>
+  <nav id="nav-menu">
+   
+    <ul>
+      <li><a href="#home" class="nav-link home">Home</a></li>
+      <li><a href="#about" class="nav-link about">About</a></li>
+      <li><a href="#skills" class="nav-link Skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link contact">Contact</a></li>
+      <li><a href="#" class="nav-link resume">Resume</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+   <br/>
+   <br/>
+   <br/>
+    <h1 id="user-detail-name">Rutik kisan Jadhav</h1>
+    <p id="user-detail-intro">Web Developer</p>
+    <button id="resume-button-1">Open Resume</button>
+    <button id="resume-button-2">Download Resume</button>
+    <br/>
+   <br/>
+   <br/>
+  </section>
+
+  <section id="about" class="about section">
+    <h1>My Story</h1>
+    <img src="your-image.jpg" alt="Your Photo" class="home-img">
+    <div style="text-align: center; width:50%; margin: auto; padding: 10px;">
+    <p style="font-size: 17px; font:  sans-serif; text-align:center;">I am a Full stack web developer doing militry style coding and learning MERN Stack at Masai School. I have done various group as well as individual projects in my coding journey.I also did my B.pharmacy My interests are coding, reading about book, browsing, exploring new areas</p>
+    </div>
+    <div class="calendar">
+      <!-- Loading stuff -->
+      Loading the data just for you.
+  </div>
+  
+  </section>
+
+  <section id="skills">
+   <h1>Technical Skills</h1> 
+    <!-- Skills content here -->
+  </section>
+
+  <section id="projects">
+    <!-- Project cards here -->
+  </section>
+
+  <section id="contact">
+    <a href="https://github.com/your-profile" id="contact-github">GitHub Profile</a><br>
+    <a href="https://www.linkedin.com/in/your-profile" id="contact-linkedin">LinkedIn Profile</a><br>
+    <span id="contact-phone">Phone Number</span><br>
+    <span id="contact-email">Email Address</span>
+  </section>
+
+  <button id="resume-button-1">Open Resume</button>
+  <button id="resume-button-2">Download Resume</button>
+
+  <script src="main.js"></script> <!-- Link your JavaScript file -->
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <script>
+    GitHubCalendar(".calendar", "hrutik2");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "hrutik2", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".calendar", "hrutik2", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${username}`)
+       }
+    }).then(r => r.text())
+</script>
+</body>
+</html>
