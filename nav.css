@@ -3,44 +3,53 @@
 
  body{
  box-sizing: border-box;
+
  margin: 0%;
  padding: 0%;
-}
 
+}
 #nav-menu {
-     position: fixed;
+  background-color: hsl(240, 66%, 38%);
+  padding: 10px 0;
+  position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color:#252528;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(18, 18, 19, 0.815);
-  z-index: 1000;
-    
-  }
-  #nav-menu ul {
-    list-style: none;
-    margin-left: 50%;
-
-  }
-  
-  #nav-menu li {
-    display: inline-block;
-    
-    margin-right: 60px; 
-  }
-  
-  #nav-menu li a {
-    color: #ddd2d2;
-    background-color: #252528;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-
-#nav-menu a:hover {
-  color: #ff7e5f; 
+  z-index: 1000; /* Ensure it's above other elements */
 }
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav li {
+  margin: 10px;
+}
+#f{
+  margin: 0px;
+  padding: 0px;
+  background-color:  hsl(240, 66%, 38%);
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  
+ 
+}
+.nav li a{
+  font-size: 20px;
+}
+.nav-link:hover {
+  background-color: #333;
+}
+ 
+
+
+
+
   
 
   #home {
@@ -68,12 +77,12 @@
   .about {
     text-align: center;
     background-color: #f4f4f4;
-    padding: 20px;
   }
   
   
   #skills {
     text-align: center;
+  
   }
   .skills{
     width: 60%;
@@ -125,53 +134,7 @@
     padding: 10px;
     font-size: 20px;
   } 
- 
-/* Media Queries */
 
-/* Small screens */
-@media screen and (max-width: 600px) {
-  #nav-menu ul {
-      margin-left: 0;
-  }
-
-  #nav-menu li {
-      display: block;
-      margin: 10px 0;
-  }
-
-  #nav-menu li a {
-      padding: 8px 16px;
-  }
-}
-
-/* Medium screens */
-@media screen and (min-width: 601px) and (max-width: 992px) {
-  #nav-menu ul {
-      margin-left: 10%;
-  }
-
-  #nav-menu li {
-      margin-right: 30px;
-  }
-}
-
-/* Large screens */
-@media screen and (min-width: 993px) {
-  #nav-menu ul {
-      margin-left: 30%;
-  }
-
-  #nav-menu li {
-      margin-right: 60px;
-  }
-}
-/* styles.css */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 .projects{
   overflow-y: scroll;
