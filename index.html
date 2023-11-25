@@ -16,7 +16,7 @@
       <li><a href="#skills" class="nav-link skills" id="f">Skills</a></li>
       <li><a href="#projects" class="nav-link projects">Projects</a></li>
       <li><a href="#contact" class="nav-link contact">Contact</a></li>
-      <li><a href="https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing" class="nav-link resume" id="resume-link-1">Resume</a></li>
+      <li><button id="resume-button-1"><a  id="resume-link-1" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="hrutik_jadhav.pdf">Resume</a></button></li>
     </ul>
   </nav>
   
@@ -44,7 +44,7 @@
     <p style="font-size: 17px; font:  sans-serif; text-align:center;" id="user-detail-intro">I am a Full stack web developer doing militry style coding and learning MERN Stack at Masai School. I have done various group as well as individual projects in my coding journey.I also did my B.pharmacy My interests are coding, reading about book, browsing, exploring new areas</p>
     </div>
     <div>
-      <button id="resume-button-1">Resume</button>
+      <button id="resume-button-2"><a  id="resume-link-2" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="hrutik_jadhav.pdf">Resume</a></button>
     </div>
     
   
@@ -250,22 +250,9 @@
        }
     }).then(r =>"")
 
-    function downloadResume() {
-    // Replace this URL with the actual URL of your resume PDF
-    const resumeUrl = '';
+  
 
-    // Open the resume in a new tab
-    window.open(resumeUrl, '_blank');
-    }
-
-  // Event listeners for the buttons
-  document.getElementById("resume-button-1").addEventListener('click', function() {
-    downloadResume()
-  });
-
-  document.getElementById("resume-link-1").addEventListener('click', function() {
-    downloadResume()
-  });
+  
     const nav = document.querySelector('#nav-menu')
 window.addEventListener('scroll', fixNav)
 

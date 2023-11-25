@@ -123,18 +123,27 @@
   }
   
   
-  #resume-button-1,
+  #resume-button-1{
+    display: block;
+    border-radius: 20px;
+    border: none;
+    background-color:hsl(240, 66%, 38%);
+  }
   #resume-button-2 {
     display: block;
     border-radius: 20px;
     border: none;
-    background-color: rgb(35, 35, 143);
+    background-color:hsl(240, 66%, 38%);
     color: white;
     margin: 20px auto;
     padding: 10px;
     font-size: 20px;
   } 
-
+ #resume-link-2,
+ #resume-link-1 {
+  text-decoration: none;
+  color: white;
+ }
 
 .projects{
   overflow-y: scroll;
