@@ -194,11 +194,11 @@ body {
   padding: 0;
 }
 
-#projects {
+/* #projects {
   overflow-y: scroll;
   height: 45vh; /* Set desired height for scrolling */
-  padding: 20px;
-}
+  /* padding: 20px; */
+/* } */ */
 
 .projects-container {
  
