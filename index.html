@@ -250,21 +250,35 @@
        }
     }).then(r =>"")
 
-    function downloadResume() {
-    // Replace this URL with the actual URL of your resume PDF
-    const resumeUrl = 'https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing';
-
-    // Open the resume in a new tab
-    window.open(resumeUrl, '_blank');
-  }
+    function downloadAndOpenPDF() {
+  // Replace this URL with the actual URL of your PDF file
+  const pdfUrl = 'https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing';
+  
+  // Create a link element
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.setAttribute('download', ''); // Use an empty string to specify default filename
+  link.setAttribute('target', '_blank'); // Open in a new tab
+  
+  // Append the link to the document body
+  document.body.appendChild(link);
+  
+  // Trigger a click event on the link to initiate the download
+  link.click();
+  
+  // Remove the link from the document body after a short delay
+  setTimeout(() => {
+    document.body.removeChild(link);
+  }, 100);
+}
 
   // Event listeners for the buttons
   document.getElementById("resume-button-1").addEventListener('click', function() {
-    downloadResume();
+    downloadAndOpenPDF()
   });
 
   document.getElementById("resume-link-1").addEventListener('click', function() {
-    downloadResume();
+    downloadAndOpenPDF()
   });
     const nav = document.querySelector('#nav-menu')
 window.addEventListener('scroll', fixNav)
