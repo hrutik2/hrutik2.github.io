@@ -223,18 +223,26 @@
     <span id="contact-email">Email:-hrutik0729@gmail.com</span>
   </section>
   
-  
+  <footer style="width: 100%; background-color: hsl(240, 66%, 38%); text-align: center; color: white;padding: 10px;">
+    <h1   >Contact Information</h1>
+    
+    <p style="font-size: 20px;" > Email:-hrutik0729@gmail.com</p>
+    
+    <p style="font-size: 20px;" > phone: +91 935986326</p>
+    
+    <p style="font-size: 20px;" >Location: Nashik,Maharashtra </p>
+  </footer>
 
   <script src="main.js"></script> <!-- Link your JavaScript file -->
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
   <script>
-    GitHubCalendar(".calendar", "hrutik2");
+    GitHubCalendar(".react-activity-calendar", "hrutik2");
 
     // or enable responsive functionality:
-    GitHubCalendar(".calendar", "hrutik2", { responsive: true });
+    GitHubCalendar(".react-activity-calendar", "hrutik2", { responsive: true });
 
     // Use a proxy
-    GitHubCalendar(".calendar", "hrutik2", {
+    GitHubCalendar(".react-activity-calendar", "hrutik2", {
        proxy (username) {
          return fetch(`https://your-proxy.com/github?user=${username}`)
        }
