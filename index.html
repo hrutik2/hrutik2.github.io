@@ -16,8 +16,8 @@
       <li><a href="#about" class="nav-link about">About</a></li>
       <li><a href="#skills" class="nav-link Skills">Skills</a></li>
       <li><a href="#projects" class="nav-link projects">Projects</a></li>
-      <!-- <li><a href="#contact" class="nav-link contact">Contact</a></li>
-      <li><a href="#" class="nav-link resume">Resume</a></li> -->
+      <li><a href="#contact" class="nav-link contact">Contact</a></li>
+      <li><a href="#" class="nav-link resume">Resume</a></li>
     </ul>
   </nav>
 
@@ -41,6 +41,9 @@
     <img src="your-image.jpg" alt="Your Photo" class="home-img">
     <div style="text-align: center; width:50%; margin: auto; padding: 10px;">
     <p style="font-size: 17px; font:  sans-serif; text-align:center;">I am a Full stack web developer doing militry style coding and learning MERN Stack at Masai School. I have done various group as well as individual projects in my coding journey.I also did my B.pharmacy My interests are coding, reading about book, browsing, exploring new areas</p>
+    </div>
+    <div>
+      <button id="resume-button-2">Resume</button>
     </div>
     
   
@@ -111,13 +114,7 @@
       </div>
     </div>
   </section>
-  <!-- <div>
-    <h1 style="text-align: center;">My GitHub Calendar</h1>
-  <div class="calendar">
-    <!-- Loading stuff -->
-    
-</div>
-</div> -->
+  
   <section id="projects">
     <h1 style="text-align: center;">Project</h1>
    <div class="projects">
@@ -197,6 +194,26 @@
   </div>
     </div>
   </section>
+  <div class="stats">
+    <div>
+      <h1 style="text-align: center;">My GitHub Calendar</h1>
+    <div class="react-activity-calendar">
+      <!-- Loading stuff -->
+      
+  </div>
+  </div>
+    <h1>My statistics</h1>
+    <div>
+     <img   id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=hrutik2&show_icons=true&locale=en" alt="">
+    </div>
+    <div>
+      <img  id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=hrutik2&" alt="">
+     </div>
+     <div>
+      <img   id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hrutik2" alt="">
+     </div>
+  </div>
+ 
 
   <section id="contact">
     <a href="https://github.com/hrutik2" id="contact-github">GitHub Profile</a><br>
@@ -204,9 +221,10 @@
     <span id="contact-phone">contact No :-+91 9359863260</span><br>
     <span id="contact-email">Email:-hrutik0729@gmail.com</span>
   </section>
-
-  <button id="resume-button-1">Open Resume</button>
-  <button id="resume-button-2">Download Resume</button>
+  <section id="Resume">
+    <button id="resume-button-1">Resume </button>
+  </section>
+  
 
   <script src="main.js"></script> <!-- Link your JavaScript file -->
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
@@ -234,6 +252,25 @@ function fixNav() {
         nav.classList.remove('active')
     }
 }
+</script>
+<script>
+  // Function to download the resume as PDF
+  function downloadResume() {
+    // Replace this URL with the actual URL of your resume PDF
+    const resumeUrl = 'https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing';
+
+    // Open the resume in a new tab
+    window.open(resumeUrl, '_blank');
+  }
+
+  // Event listeners for the buttons
+  document.getElementById('resume-button-1').addEventListener('click', function() {
+    downloadResume();
+  });
+
+  document.getElementById('resume-button-2').addEventListener('click', function() {
+    downloadResume();
+  });
 </script>
 </body>
 </html>

@@ -117,7 +117,13 @@
   #resume-button-1,
   #resume-button-2 {
     display: block;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(35, 35, 143);
+    color: white;
     margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
   } 
  
 /* Media Queries */
@@ -243,4 +249,12 @@ body {
   color: black;
   font-size: 20px;
   margin-left: 20px;
+}
+.stats{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+.stats div{
+  margin-top: 20px;
 }
