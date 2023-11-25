@@ -86,40 +86,7 @@
   }
   
  
-  #projects {
-    text-align: center;
-  }
   
-  .project-card {
-    display: inline-block;
-    margin: 20px;
-    text-align: left;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .project-title {
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
-  
-  .project-description {
-    font-size: 0.9em;
-    margin: 10px 0;
-  }
-  
-  .project-tech-stack {
-    font-size: 0.8em;
-    color: #666;
-  }
-  
-  .project-github-link,
-  .project-deployed-link {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-  }
   
  
   #contact {
@@ -194,20 +161,21 @@ body {
   padding: 0;
 }
 
-/* #projects {
+.projects{
   overflow-y: scroll;
-  height: 45vh; /* Set desired height for scrolling */
-  /* padding: 20px; */
-/* } */ */
+  height: 38vh; /* Set desired height for scrolling */
+  padding: 20px;
+}
 
 .projects-container {
  
+ 
   width: 60%;
   margin: auto;
-  margin-top: 30px;
+ 
 }
    
- .projects-card {
+ .projects-card{
   display: flex;
   width: 90%;
   margin: auto;
@@ -218,7 +186,16 @@ body {
   margin-bottom: 40px;
 
 }
-
+.project-card{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  background-color: beige;
+  border: 10px ;
+  box-shadow: 0 4px 6px rgba(180, 180, 184, 0.815);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
 .img-container {
   width: 30%;
   margin-left: 20px;
@@ -230,27 +207,34 @@ body {
   margin-left: 20px;
 }
 
-.project-info h2 {
+.project-title{
+  margin-top: 10px;
   text-align: center;
 }
 
-.project-info p {
+.project-description {
   text-align: center;
   font-size: 20px;
+  padding-right: 10px;
 }
-
-.project-info p b {
-  /* ... */
+.project-tech-stack {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  padding-left: 15px;
 }
-
-.project-info a {
-  
+.project-github-link{
   text-align: center;
   text-decoration: none;
-  margin: 10px auto;
+  color: black;
+  font-size: 20px;
+  margin-left: 20px;
 }
 
-.project-info a button {
-  padding: 7px;
-  border: none;
+.project-deployed-link{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-left: 20px;
 }
