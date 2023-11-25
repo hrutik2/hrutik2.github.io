@@ -16,7 +16,7 @@
       <li><a href="#skills" class="nav-link skills" id="f">Skills</a></li>
       <li><a href="#projects" class="nav-link projects">Projects</a></li>
       <li><a href="#contact" class="nav-link contact">Contact</a></li>
-      <li><a href="#" class="nav-link">Resume</a></li>
+      <li><a href="#" class="nav-link" id="resume-link-1">Resume</a></li>
     </ul>
   </nav>
   
@@ -222,9 +222,7 @@
     <span id="contact-phone">contact No :-+91 9359863260</span><br>
     <span id="contact-email">Email:-hrutik0729@gmail.com</span>
   </section>
-  <section id="Resume">
-    <button id="resume-button-1">Resume </button>
-  </section>
+  
   
 
   <script src="main.js"></script> <!-- Link your JavaScript file -->
@@ -254,6 +252,7 @@ function fixNav() {
     }
 }
 </script>
+
 <script>
   // Function to download the resume as PDF
   function downloadResume() {
@@ -272,6 +271,18 @@ function fixNav() {
   document.getElementById('resume-button-2').addEventListener('click', function() {
     downloadResume();
   });
+
+  // Additional code for fixing the navbar position on scroll
+  const navv = document.querySelector('#nav-menu');
+  window.addEventListener('scroll', fixNav);
+
+  function fixNav() {
+    if (window.scrollY > nav.offsetHeight + 150) {
+      navv.classList.add('active');
+    } else {
+      navv.classList.remove('active');
+    }
+  }
 </script>
 </body>
 </html>
