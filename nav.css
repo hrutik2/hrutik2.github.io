@@ -211,3 +211,6 @@
 .stats div{
   margin-top: 20px;
 }
+#i{
+  max-width: 50px;
+}
