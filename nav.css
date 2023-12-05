@@ -353,8 +353,10 @@ body{
   }
  
 .projects{
-  width: 50%;
-  margin: auto;
+  width: 70%;
+  margin-left:15%;
+  margin-right: 15%;
+  
 }
   
  
@@ -368,7 +370,7 @@ body{
   
   .project-card {
  
-    height: 80vh; /* Set desired height for scrolling */
+    /* height: 80vh; Set desired height for scrolling */
     padding: 20px;
     background-color: beige;
     box-shadow: 0 4px 6px rgba(180, 180, 184, 0.815);
@@ -418,9 +420,10 @@ body{
    font-size: 20px;
    margin-left: 20px;
  }
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 900px) {
   .projects {
-    width: 80%; /* Adjust width for smaller screens */
+    width: 70%; 
+    margin: auto;
   }
 
   .projects-container {
