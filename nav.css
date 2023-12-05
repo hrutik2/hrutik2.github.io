@@ -368,7 +368,7 @@ body{
   
   .project-card {
  
-    height: 70vh; /* Set desired height for scrolling */
+    height: 75vh; /* Set desired height for scrolling */
     padding: 20px;
     background-color: beige;
     box-shadow: 0 4px 6px rgba(180, 180, 184, 0.815);
