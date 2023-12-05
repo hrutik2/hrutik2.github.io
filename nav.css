@@ -352,42 +352,41 @@ body{
    color: white;
   }
  
- .projects{
-   overflow-y: scroll;
-   height: 40vh; /* Set desired height for scrolling */
-   padding: 20px;
- }
+.projects{
+  width: 50%;
+  margin: auto;
+}
+  
  
- .projects-container {
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-gap: 40px;
+    padding: 50px;
+  }
   
-  
-   width: 70%;
-   margin: auto;
-  
- }
-    
-  
- .project-card{
-   display: flex;
-   width: 100%;
-   margin: auto;
-   background-color: beige;
-   border: 10px ;
-   box-shadow: 0 4px 6px rgba(180, 180, 184, 0.815);
-   border-radius: 20px;
-   margin-bottom: 50px;
- }
- .img-container {
-   width: 30%;
-   margin-left: 20px;
-   margin-right: 20px;
- }
+  .project-card {
  
- .project-info {
-   width: 70%;
-   margin-left: 20px;
- }
- 
+    height: 70vh; /* Set desired height for scrolling */
+    padding: 20px;
+    background-color: beige;
+    box-shadow: 0 4px 6px rgba(180, 180, 184, 0.815);
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .img-container {
+    width: 70%;
+    margin: auto;
+  }
+  .img-container img{
+    width: 100%;
+  }
+  
+  .project-info {
+    width: 100%;
+  }
  .project-title{
    margin-top: 10px;
    text-align: center;
@@ -419,52 +418,27 @@ body{
    font-size: 20px;
    margin-left: 20px;
  }
- @media screen and (max-width: 1024px) {
-  .projects-container {
-    width: 80%; /* Adjusted width for tablets */
+ @media screen and (max-width: 768px) {
+  .projects {
+    width: 80%; /* Adjust width for smaller screens */
   }
-  
-  .img-container {
-    width: 40%; /* Adjusted width for tablets */
-    margin-left: 10px; /* Adjusted margin for tablets */
-    margin-right: 10px; /* Adjusted margin for tablets */
-  }
-  
-  .project-info {
-    width: 60%; /* Adjusted width for tablets */
-    margin-left: 10px; /* Adjusted margin for tablets */
-  }
-}
 
-/* Media query for smartphones */
-@media screen and (max-width: 768px) {
-  .projects{
-    overflow-y: scroll;
-    height: 90vh; /* Set desired height for scrolling */
-    padding: 20px;
-  }
   .projects-container {
-    width: 90%; /* Adjusted width for smartphones */
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column for smaller screens */
+    padding: 20px; /* Adjust padding */
   }
-  
+
   .project-card {
-    flex-direction: column; /* Stack cards vertically for smartphones */
+    height: auto; /* Reset height for smaller screens */
+    margin-bottom: 30px; /* Adjust margin */
   }
-  
+
   .img-container {
-    width: 50%; /* Adjusted width for smartphones */
-    margin: auto; /* No margin for smartphones */
+    width: 100%;
   }
-  
-  .project-info {
-    width: 100%; /* Adjusted width for smartphones */
-    margin-left: 0; /* No margin for smartphones */
-  }
-}
-@media screen and (max-width: 480px) {
-  .img-container {
-    width: 80%; /* Adjusted width for smartphones */
-    margin: auto; /* No margin for smartphones */
+
+  .project-description {
+    font-size: 16px; /* Adjust font size */
   }
 }
  .stats{
