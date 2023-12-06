@@ -67,6 +67,9 @@ body{
   #nav-menu {
     width: 100%;
   }
+  #f{
+    display: none;
+  }
    .nav li {
      margin: 6px; /* Example change */
    }
@@ -91,7 +94,7 @@ body{
      
    }
    
-   .users-detail-intro {
+   .user-detail-intro {
      font-size: 40px;
      font:  sans-serif;
    }
@@ -107,6 +110,7 @@ body{
      text-align: center;
      width: 100%;
      margin: auto;
+     padding: 10px;
      background-color: #cbc2c2;
    }
    @media screen and (max-width: 768px) {
@@ -419,6 +423,12 @@ body{
    font-size: 20px;
    margin-left: 20px;
  }
+ @media screen and (max-width: 1500px) {
+  .projects {
+    width: 100%; 
+    margin: auto;
+  }
+}
  @media screen and (max-width: 1200px) {
   .projects {
     width: 70%; 
@@ -484,19 +494,11 @@ body{
  .stats div{
    margin-top: 20px;
  }
- .i{
-   max-width: 60px;
-   margin-left: 5px;
- } 
-.m{
+ .m{
   width: 100%;
 
 }
-.z{
-  display: flex;
-  width: 10%;
-  margin: auto;
-}
+ 
 @media screen and (max-width: 1024px) {
   .stats{
     width: 30%;
@@ -506,10 +508,7 @@ body{
   .stats div{
     margin-top: 20px;
   }
-  .z {
-    width: 20%;
-    margin: auto; /* Adjust the width for tablets */
-  }
+  
 }
 
 /* For smartphones */
@@ -522,10 +521,7 @@ body{
   .stats div{
     margin-top: 20px;
   }
-  .z {
-    width: 50%;
-    margin: auto; /* Adjust the width for smartphones */
-  }
+  
 }
 
 /* For smaller smartphones or specific portrait orientations */
@@ -538,8 +534,38 @@ body{
   .stats div{
     margin-top: 20px;
   }
-  .z {
-    width: 80%; 
-    margin: auto;/* Adjust the width for smaller smartphones */
-  }
+  
 }
+.i{
+  max-width: 100%;
+  margin-left: 5px;
+} 
+.i2{
+ max-width: 90%;
+ margin: auto;
+ padding-top: 10px;
+ margin-left: 5px;
+}
+
+.z{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-gap: 10px;
+ width: 15%;
+ padding: 10px;
+ margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .z{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+} 
+
+/* For smaller smartphones or specific portrait orientations */
+@media screen and (max-width: 480px) { 
+  .z{
+    grid-template-columns: repeat(1, 1fr);
+  }
+ } 

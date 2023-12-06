@@ -14,8 +14,8 @@
       <li><a href="#home" class="nav-link home">Home</a></li>
       <li><a href="#about" class="nav-link about" id="f">About</a></li>
       <li><a href="#skills" class="nav-link skills" id="f">Skills</a></li>
-      <li><a href="#projects" class="nav-link projects">Projects</a></li>
-      <li><a href="#contact" class="nav-link contact">Contact</a></li>
+      <li><a href="#projects" class="nav-link projects" id="f">Projects</a></li>
+      <li><a href="#contact" class="nav-link contact" id="f">Contact</a></li>
       <li><button id="resume-button-1"><a  id="resume-link-1" class="nav-link resume" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="Rutik-Jadhav-Resume">Resume</a></button></li>
     </ul>
   </nav>
@@ -219,10 +219,18 @@
 
   <section id="contact">
     <div  class="z">
+    <div>
     <a href="https://github.com/hrutik2" id="contact-github"><img class="i" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Github-circle_%28CoreUI_Icons_v1.0.0%29.svg/2048px-Github-circle_%28CoreUI_Icons_v1.0.0%29.svg.png"></a>
+  </div>
+  <div>
     <a href="https://www.linkedin.com/in/hrutik-jadhav-56ba96247/" id="contact-linkedin"><img class="i" src="./static/New folder/linkedin.png"></a>
-    <a href="tel:+919359863260" class="contact-phone"><img class="i"  src="./static/New folder/calling.png"></a>
-    <a href="mailto:hrutik0729@gmail.com" class="contact-email"><img class="i"  src="./static/New folder/mail.png"></a>
+  </div>
+  <div>
+    <a href="tel:+919359863260" class="contact-phone"><img class="i2"  src="./static/New folder/calling.png"></a>
+  </div>
+  <div>
+    <a href="mailto:hrutik0729@gmail.com" class="contact-email"><img class="i2"  src="./static/New folder/mail.png"></a>
+  </div>
   </div>
   </section>
   
@@ -264,7 +272,18 @@ function fixNav() {
         nav.classList.remove('active')
     }
 }
+document.getElementById("resume-link-2").addEventListener("click", function() {
+ 
+  const googleDriveURL = "https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing";
+  window.open(googleDriveURL, "_blank");
+});
+document.getElementById("resume-link-1").addEventListener("click", function() {
+ 
+ const googleDriveURL = "https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing";
+ window.open(googleDriveURL, "_blank");
+});
 </script>
+
 
 
 </body>
