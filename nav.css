@@ -38,12 +38,15 @@ body{
   
  }
  .nav li a{
-   font-size: 20px;
+   font-size: 15px;
  }
  .nav-link:hover {
    background-color: #333;
  }
-  
+ .nav li button a{
+  font-size: 15px;
+ }
+ 
  @media screen and (max-width: 768px) {
   #nav-menu {
     width: 100%;
@@ -64,12 +67,12 @@ body{
  
  /* Media query for smaller smartphones or specific portrait orientations */
  @media screen and (max-width: 480px) {
+ 
   #nav-menu {
     width: 100%;
+    
   }
-  #f{
-    display: none;
-  }
+ 
    .nav li {
      margin: 6px; /* Example change */
    }
@@ -77,6 +80,7 @@ body{
    .nav-link {
      font-size: 14px; /* Example change */
    }
+ 
  }
  
  
@@ -361,7 +365,9 @@ body{
  margin: auto;
   
 }
-  
+  .g{
+    max-width: 40px;
+  }
  
   .projects-container {
     display: grid;
