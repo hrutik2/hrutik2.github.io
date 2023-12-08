@@ -10,17 +10,39 @@
 </head>
 <body>
   <nav id="nav-menu">
+    <div>
+      <button id="resume-button-1"><a  id="resume-link-1" class="nav-link resume" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="Rutik-Jadhav-Resume">Resume</a></button>
+    </div>
+    <div class="nav">
+      <a href="#home" class="nav-link home" id="f">Home</a>
+      <a href="#about" class="nav-link about" id="f">About</a>
+      <a href="#skills" class="nav-link skills" id="f">Skills</a>
+      <a href="#projects" class="nav-link projects" id="f">Projects</a>
+      <a href="#contact" class="nav-link contact" id="f">Contact</a>
+    </div>
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">&#9776;</button>
+      <div class="hidden" id="menu">
+        <div>
+        <a href="#home" class="nav-link home">Home</a>
+      </div>
+      <div>
+        <a href="#about" class="nav-link about">About</a>
+      </div>
+      <div >
+        <a href="#skills" class="nav-link skills" id="s">Skills</a>
+      </div>
+      <div>
+        <a href="#projects" class="nav-link projects">Projects</a>
+      </div>
+      <div>
+        <a href="#contact" class="nav-link contact">Contact</a>
+      </div>
+      </div>
+      </div>
+    </div>
     
-    <ul class="nav">
-      <li><a href="#home" class="nav-link home">Home</a></li>
-      <li><a href="#about" class="nav-link about" id="f">About</a></li>
-      <li><a href="#skills" class="nav-link skills" id="f">Skills</a></li>
-      <li><a href="#projects" class="nav-link projects" id="f">Projects</a></li>
-      <li><a href="#contact" class="nav-link contact" id="f">Contact</a></li>
-      <li><button id="resume-button-1"><a  id="resume-link-1" class="nav-link resume" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="Rutik-Jadhav-Resume">Resume</a></button></li>
-    </ul>
   </nav>
-  
+ 
    
 
   <section id="home">
@@ -328,7 +350,24 @@ document.getElementById("resume-link-1").addEventListener("click", function() {
  const googleDriveURL = "https://drive.google.com/file/d/1vw1eWg-vq1AUBujKzEh35f1sxHX_Gg6F/view?usp=sharing";
  window.open(googleDriveURL, "_blank");
 });
+// Get references to the hamburger button and the menu
+const hamburgerButton = document.getElementById('hamburgerBtn');
+const menu = document.getElementById('menu');
+const s=document.getElementById("s")
+//Function to toggle the menu
+function toggleMenu() {
+  if (menu.style.display === 'none' ) {
+    menu.style.display = 'block'; // Show the menu if it's hidden
+  } else {
+    menu.style.display = 'none'; // Hide the menu if it's visible
+  }
 
+}
+
+
+
+// Add click event listener to the hamburger button
+hamburgerButton.addEventListener('click', toggleMenu);
 
 </script>
 

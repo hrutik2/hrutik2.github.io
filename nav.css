@@ -7,6 +7,8 @@ body{
  
  }
  #nav-menu {
+  display: flex;
+  justify-content: space-around;
    background-color: hsl(240, 66%, 38%);
    padding: 10px 0;
    position: fixed;
@@ -14,73 +16,46 @@ body{
    width: 100%;
   /* Ensure it's above other elements */
  }
+ .hamburger{
+  display: none;
+ }
  
  .nav {
    list-style: none;
    margin: 0;
    padding: 0;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
  }
+ #menu {
+  display: none; /* Initially hide the menu */
+}
  
- .nav li {
-   margin: 10px;
- }
- #f{
+ #f,#resume-link-1{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
    margin: 0px;
    padding: 0px;
+   margin-right: 40px;
    background-color:  hsl(240, 66%, 38%);
  }
- .nav-link {
-   color: white;
-   text-decoration: none;
-   
-  
- }
- .nav li a{
-   font-size: 15px;
- }
- .nav-link:hover {
+ 
+ #f:hover {
    background-color: #333;
  }
- .nav li button a{
-  font-size: 15px;
- }
+
  
- @media screen and (max-width: 768px) {
-  #nav-menu {
-    width: 100%;
-  }
-   .nav {
-     justify-content: center; /* Centering navigation links */
-     flex-wrap: wrap; /* Allowing navigation items to wrap */
-   }
- 
-   .nav li {
-     margin: 8px;
-   }
- 
-   .nav-link {
-     font-size: 16px; /* Example change */
-   }
- }
- 
+
  /* Media query for smaller smartphones or specific portrait orientations */
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 580px) {
  
-  #nav-menu {
-    width: 100%;
-    
-  }
- 
-   .nav li {
-     margin: 6px; /* Example change */
-   }
- 
-   .nav-link {
-     font-size: 14px; /* Example change */
-   }
- 
+ .hamburger{
+  display: inline;
+ }
+ #f{
+  display: none;
+ }
  }
  
  
@@ -575,3 +550,36 @@ body{
     grid-template-columns: repeat(1, 1fr);
   }
  } 
+
+ #menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust the distance from the top as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  background-color:transparent;
+  
+  padding: 10px;
+  z-index: 1000; /* Ensure it's above other elements */
+  
+}
+#menu div{
+  border: 1px solid black;
+  margin:10px;
+  padding: 10px;
+}
+#menu div a{
+   color: rgb(22, 22, 22);
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 20px;
+}
+#s{
+  margin: 0px;
+  padding: 0px;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
