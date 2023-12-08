@@ -13,32 +13,29 @@
     <div>
       <button id="resume-button-1"><a  id="resume-link-1" class="nav-link resume" href="./static/Rutik Kisan Jadhav-Full Stack Web Developer.pdf" download="Rutik-Jadhav-Resume">Resume</a></button>
     </div>
-    <div class="nav">
-      <a href="#home" class="nav-link home" id="f">Home</a>
-      <a href="#about" class="nav-link about" id="f">About</a>
-      <a href="#skills" class="nav-link skills" id="f">Skills</a>
-      <a href="#projects" class="nav-link projects" id="f">Projects</a>
-      <a href="#contact" class="nav-link contact" id="f">Contact</a>
+   
+    <div class="mobile-nav">
+      <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <ul class="horizontal-nav" id="navList">
+        <li><a href="#home" class="nav-link home" onclick="closeMenu()" >Home</a></li>
+        <li><a href="#about" class="nav-link about" onclick="closeMenu()">About</a></li>
+        <li><a href="#skills" class="nav-link skills"onclick="closeMenu()" >Skills</a></li>
+        <li><a href="#projects" class="nav-link projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#contact" class="nav-link contact" onclick="closeMenu()" >Contact</a></li>
+      </ul>
     </div>
-      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">&#9776;</button>
-      <div class="hidden" id="menu">
-        <div>
-        <a href="#home" class="nav-link home">Home</a>
-      </div>
-      <div>
-        <a href="#about" class="nav-link about">About</a>
-      </div>
-      <div >
-        <a href="#skills" class="nav-link skills" id="s">Skills</a>
-      </div>
-      <div>
-        <a href="#projects" class="nav-link projects">Projects</a>
-      </div>
-      <div>
-        <a href="#contact" class="nav-link contact">Contact</a>
-      </div>
-      </div>
-      </div>
+    <div class="Desktop-nav">
+    
+        <a href="#home" class="nav-link home" id="f2">Home</a>
+        <a href="#about" class="nav-link about" id="f2">About</a>
+        <a href="#skills" class="nav-link skills" id="f3">Skills</a>
+        <a href="#projects" class="nav-link projects" id="f3">Projects</a>
+        <a href="#contact" class="nav-link contact" id="f2">Contact</a>
+      
+    </div>
+      
+      
+      
     </div>
     
   </nav>
@@ -355,22 +352,63 @@ const hamburgerButton = document.getElementById('hamburgerBtn');
 const menu = document.getElementById('menu');
 const s=document.getElementById("s")
 //Function to toggle the menu
-function toggleMenu() {
-  if (menu.style.display === 'none' ) {
-    menu.style.display = 'block'; // Show the menu if it's hidden
-  } else {
-    menu.style.display = 'none'; // Hide the menu if it's visible
-  }
-
+// function toggleMenu() {
+//   if (menu.style.display === 'none' ) {
+//     menu.style.display = 'block'; // Show the menu if it's hidden
+//   } else {
+//     menu.style.display = 'none'; // Hide the menu if it's visible
+//   }
+// }
+// function closeMenuOutsideClick(event) {
+//   if ( menu.style.display = 'block') {
+//     menu.style.display = 'none'
+//     ; // Show the menu if it's hidden
+//   } else {
+//     menu.style.display = 'block' // Hide the menu if it's visible
+//   }
+// }
+function toggleMenu(event) {
+  event.stopPropagation();
+  const navList = document.getElementById('navList');
+  navList.classList.toggle('show-menu');
 }
 
+// Close the menu when clicking a link
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const navList = document.getElementById('navList');
+    navList.classList.remove('show-menu');
+  });
+});
+
+// Close the menu when clicking outside the menu area
+window.addEventListener('click', (event) => {
+  const navList = document.getElementById('navList');
+  if (!event.target.closest('.mobile-nav')) {
+    navList.classList.remove('show-menu');
+  }
+});
 
 
-// Add click event listener to the hamburger button
-hamburgerButton.addEventListener('click', toggleMenu);
-  </script>
+function toggleMenu() {
+      var navList = document.getElementById("navList");
+      if (navList.style.display === "block") {
+        navList.style.display = "none";
+      } else {
+        navList.style.display = "block";
+      }
+    }
+
+
+    function closeMenu() {
+      var navList = document.getElementById("navList");
+      navList.style.display = "none";
+    }
+</script>
 
 
 
 </body>
 </html>
+
