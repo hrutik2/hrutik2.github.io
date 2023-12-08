@@ -1,4 +1,3 @@
-/* styles.css */
 body{
   box-sizing: border-box;
  
@@ -6,61 +5,93 @@ body{
   padding: 0%;
  
  }
- #nav-menu {
+ #nav-menu{
+  width: 100%;
+  background-color: rgb(24, 24, 169);
   display: flex;
-  justify-content: space-around;
-   background-color: hsl(240, 66%, 38%);
-   padding: 10px 0;
-   position: fixed;
-   top: 0;
-   width: 100%;
-  /* Ensure it's above other elements */
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  padding: 10px;
  }
- .hamburger{
+ .mobile-nav{
   display: none;
  }
- 
- .nav {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content: space-between;
+ .Desktop-nav{
+  display: flex; 
+  text-decoration: none;
  }
- #menu {
-  display: none; /* Initially hide the menu */
-}
- 
- #f,#resume-link-1{
+ #f2{
   color: white;
   text-decoration: none;
   font-size: 20px;
-   margin: 0px;
-   padding: 0px;
-   margin-right: 40px;
-   background-color:  hsl(240, 66%, 38%);
+  margin: 10px;
+  margin-right: 40px;
+  font: 1.3em sans-serif;
  }
- 
- #f:hover {
-   background-color: #333;
+ #resume-link-1{
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+  font: 1.6em sans-serif;
  }
+ #f3{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font: 1.3em sans-serif;
+  
+  padding: 0px;
+}
+@media screen and (max-width: 780px) {
+  .nav-link {
+    display: block;
+  }
+  .Desktop-nav{
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    
+  }
 
- 
+  .hamburger {
+    display: block;
+    margin-right: 30px;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 12px;
+    color: white;
+    border: none;
+  }
 
- /* Media query for smaller smartphones or specific portrait orientations */
- @media screen and (max-width: 580px) {
- 
- .hamburger{
-  display: inline;
- }
- #f{
-  display: none;
- }
- }
- 
- 
- 
- 
+  #navList {
+    display: none;
+    flex-direction: column;
+    background-color:transparent;
+    
+    width: 100px;
+    position: absolute;
+    top: 70px;
+    right:70px;
+    list-style: none;
+  }
+
+  #navList li {
+    text-align: center;
+    
+  }
+
+  #navList li a {
+    padding: 10px;
+    color:rgb(8, 20, 188);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
    
  
    #home {
@@ -329,8 +360,7 @@ body{
      padding: 10px;
      font-size: 20px;
    } 
-  #resume-link-2,
-  #resume-link-1 {
+  #resume-link-2{
    text-decoration: none;
    color: white;
   }
@@ -551,38 +581,7 @@ body{
   }
  } 
 
- #menu {
-  display: none;
-  position: absolute;
-  top: 60px; /* Adjust the distance from the top as needed */
-  right: 20px; /* Adjust the distance from the right as needed */
-  background-color:transparent;
-  
-  padding: 10px;
-  z-index: 1000; /* Ensure it's above other elements */
-  
-}
-#menu div{
  
-  margin:10px;
-  padding: 10px;
-}
-#menu div a{
-   color: rgb(22, 22, 22);
-   text-decoration: none;
-   font-weight: bold;
-   font-size: 20px;
-}
-#s{
-  margin: 0px;
-  padding: 0px;
-}
-.hidden {
-  display: none;
-}
-.visible {
-  display: block;
-}
 
 
 
