@@ -438,6 +438,9 @@ body{
   .projects {
     width: 100%; 
     margin: auto;
+  }.projects-container {
+    grid-template-columns: repeat(3, 1fr); /* Change to a single column for smaller screens */
+    padding: 20px; /* Adjust padding */
   }
 }
  @media screen and (max-width: 1200px) {
