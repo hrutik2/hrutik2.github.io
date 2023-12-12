@@ -18,23 +18,26 @@ body{
   display: none;
  }
  .Desktop-nav{
+  width: 80%;
   margin-left: 30px;
   display: flex; 
   text-decoration: none;
+
  }
  #f2{
   color: white;
   text-decoration: none;
   font-size: 20px;
   margin: 10px;
-  margin-right: 60px;
+  margin-right: 17%;
   font: 1.3em sans-serif;
  }
  #f4{
   color: white;
   text-decoration: none;
   font-size: 20px;
-  margin: 10px;
+margin: 10px;
+margin-right: 5%;
   font: 1.3em sans-serif;
   
  }
@@ -64,6 +67,7 @@ body{
   color: white;
   text-decoration: none;
   font-size: 20px;
+  margin-right: 10%;
   font: 1.3em sans-serif;
   
   padding: 0px;
@@ -73,7 +77,7 @@ body{
   text-decoration: none;
   font-size: 20px;
   font: 1.3em sans-serif;
-   margin-left: 30px;
+  margin-right: 11%;
   padding: 0px;
 }
 @media screen and (max-width: 780px) {
@@ -102,7 +106,7 @@ body{
     display: block;
     
   }
-
+ 
   .hamburger {
     display: block;
     margin-top: 2px;
@@ -143,8 +147,43 @@ body{
     font-size: 20px;
   }
 }
-   
- 
+@media screen and (max-width: 1000px) {   
+#f2{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  margin-right: 10%;
+  font: 1.3em sans-serif;
+ }
+ #f4{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+margin: 10px;
+margin-right: 5%;
+  font: 1.3em sans-serif;
+  
+ }
+#f3{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 8%;
+  font: 1.3em sans-serif;
+  
+  padding: 0px;
+}
+#f31{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font: 1.3em sans-serif;
+  margin-right: 9%;
+  padding: 0px;
+}
+
+} 
    #home {
     top: 20;
      text-align: center;
