@@ -14,7 +14,7 @@ body{
   position: fixed;
   top: 0;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   z-index: 500;
  }
  .nav-link.active {
@@ -217,6 +217,7 @@ margin-right: 5%;
  .Desktop-nav{
   width: 50%;
   margin: auto;
+  padding: 0px;
  }
   
   
@@ -315,6 +316,15 @@ margin-right: 5%;
     flex-direction: column;
 
   }
+  .home-img {
+ 
+
+    max-width: 60%;
+    margin: auto;
+    min-height: fit-content;
+    border-radius:55%;
+    margin-top: 60px;
+  }
   .container div {
     padding: 0px;
     margin: 0px;
@@ -342,9 +352,11 @@ margin-right: 5%;
   .home-img {
  
 
-    max-width: 100%;
-    border-radius: 30px;
-    margin-top: 80px;
+    max-width: 60%;
+    margin: auto;
+    min-height: fit-content;
+    border-radius:55%;
+    margin-top: 60px;
   }
   .container div {
     padding: 0px;
