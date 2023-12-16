@@ -170,12 +170,20 @@ margin-right: 5%;
     width: 100%;
     
   
-    margin-left: 23%;
+    margin-left: 31%;
   
   }    
  
 }
-
+@media screen and (max-width: 480px) {
+  #j{
+    width: 100%;
+    
+  
+    margin-left: 21%;
+  
+  } 
+}
 @media screen and (max-width: 1000px) {   
 #f2{
   color: white;
