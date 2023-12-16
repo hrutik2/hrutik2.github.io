@@ -811,7 +811,7 @@ margin-right: 5%;
 /* Footer Styles */
 footer {
   width: 100%;
-  background-color: hsl(240, 2%, 25%);
+  background-color: hsla(240, 2%, 8%, 0.586);
   text-align: center;
   color: white;
   padding: 10px;
