@@ -14,6 +14,7 @@
    
     <div class="mobile-nav">
       <button id="hamburgerBtn" class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <div class="navList1">
       <ul class="horizontal-nav" id="navList">
        
         <li><a href="#about" class="nav-link about" onclick="closeMenu()">About</a></li>
@@ -21,6 +22,7 @@
         <li><a href="#projects" class="nav-link projects" onclick="closeMenu()">Projects</a></li>
         <li><a href="#contact" class="nav-link contact" onclick="closeMenu()"  >Contact</a></li>
       </ul>
+    </div>
     </div>
     <div class="Desktop-nav1">
       <a href="#home" class="nav-link home" id="f2">Rutik </a>
@@ -136,6 +138,26 @@
           </div>
         </div>
       </div>
+      <div class="skills-card">
+        <div>
+          <div>
+            <img src="./static/media/nodejs.7d0b6dd3874fbb64c0a7.jpg" alt=""  class="skills-card-img">
+          </div>
+          <div>
+            <h2  class="skills-card-name">Node</h2>
+          </div>
+        </div>
+      </div>
+      <div class="skills-card">
+        <div>
+          <div>
+            <img src="./static/media/express.68ef677f493a3a032805.jpg" alt=""  class="skills-card-img">
+          </div>
+          <div>
+            <h2  class="skills-card-name">Express</h2>
+          </div>
+        </div>
+      </div>
     </div>
     <h1> Tools</h1> 
     <div class="skills">
@@ -162,8 +184,8 @@
       <div class="skills-card">
         <div>
         
-          <div class="skill_img">
-            <img src="./static/github.png" alt=""  class="skills-card-img">
+          <div >
+            <img src="./static/media/github.a98e1dee3f5cbe584a5a.jpg" alt=""  class="skills-card-img">
           </div>
      
           <div>
@@ -233,7 +255,7 @@
         <img src="./static/wood.png" alt="">
       </div>
       <div class="project-info " >
-        <h2 class="project-title">WOODCRAFT</h2>
+        <h2 class="project-title">WOOD CRAFT</h2>
         <br>
         <p  class="project-description">This e-commerce website and we have our products by made of Woods.Implemented user registration, authentication, and cart functionality. Managed product detail and single product pages</p>
         <p   class="project-tech-stack"><b>Tech Stack</b> - TypeScript.
@@ -407,6 +429,56 @@ function toggleMenu() {
       var navList = document.getElementById("navList");
       navList.style.display = "none";
     }
+
+
+
+
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100, // Adjust scroll position if needed
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Function to check if the section is in the viewport
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Function to handle anchor color change based on section visibility
+    function handleAnchorColorChange() {
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        const sectionId = section.id;
+        const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+        if (isElementInViewport(section)) {
+          correspondingLink.classList.add('active');
+        } else {
+          correspondingLink.classList.remove('active');
+        }
+      });
+    }
+
+    // Listen for scroll events to check for section visibility
+    document.addEventListener('scroll', handleAnchorColorChange);
+    window.addEventListener('resize', handleAnchorColorChange);
+    handleAnchorColorChange();
 </script>
 
 
