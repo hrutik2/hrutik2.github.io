@@ -4,7 +4,7 @@ body{
   margin-left: 0px;
   padding: 0%;
   margin-top: 70px;
-  background-color: #333;
+  background-color:rgba(0, 0, 0, 0.749);
  }
  #nav-menu{
 
@@ -242,12 +242,14 @@ margin-right: 5%;
   flex-direction: row-reverse;
  }
  .container div{
-  margin-top: 20px;
-  padding: 40px;
+  margin-top: 0px;
+  padding: 20px;
+
  
  }
  .name{
   width: 90%;
+  padding: 20px;
   margin: auto;
   margin-top: 0px;
  
